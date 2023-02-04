@@ -1,0 +1,19 @@
+{
+  "name": "example-hardhat-project",
+  "version": "1.0.0",
+  "description": "This is a example hardhat project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx hardhat test",
+    "local-node": "npx @hashgraph/hedera-local restart -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hashgraph/hedera-local": "^2.4.5",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1"
+  },
+  "devDependencies": {
+    "hardhat": "^2.12.6"
+  }
+}
