@@ -1,11 +1,14 @@
 const hre = require('hardhat');
 const { expect } = require('chai');
 
+//Standard test setup
+//We user hre to run our predefined tasks from hardhat.config.js
 describe('RPC', function() {
   let contractAddress;
   let signers;
 
   before(async function () {
+    //Get the accounts defined in our hardhat.config.js
     signers = await hre.ethers.getSigners();
   });
 
