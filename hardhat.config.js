@@ -18,6 +18,11 @@ task("deploy-contract", async () => {
   return deployContract();
 });
 
+task("deploy-contract-inheritance", async () => {
+  const deployContract = require("./scripts/deployContractInheritance");
+  return deployContract();
+});
+
 task("contract-view-call", async (taskArgs) => {
   const contractViewCall = require("./scripts/contractViewCall");
   return contractViewCall(taskArgs.contractAddress);
@@ -55,8 +60,8 @@ module.exports = {
     testnet: {
       url: "https://testnet.hashio.io/api",
       accounts: [
-        "0xb46751179bc8aa9e129d34463e46cd924055112eb30b31637b5081b56ad96129",
-        "0x484961ec6c67c270dc5659ea8bb61489967c6acc574d81b1e046e072d5d2436d",
+        "484961ec6c67c270dc5659ea8bb61489967c6acc574d81b1e046e072d5d2436d",
+        "b46751179bc8aa9e129d34463e46cd924055112eb30b31637b5081b56ad96129",
       ],
       chainId: 296,
     },

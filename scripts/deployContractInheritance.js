@@ -7,15 +7,15 @@ module.exports = async () => {
   //Initialize a contract factory object
   //name of contract as first parameter
   //wallet/signer used for signing the contract calls/transactions with this contract
-  const Greeter = await ethers.getContractFactory("Greeter", wallet);
+  const Greeter = await ethers.getContractFactory("A", wallet);
   //Using already intilized contract facotry object with our contract, we can invoke deploy function to deploy the contract.
   //Accepts constructor parameters from our contract
-  const greeter = await Greeter.deploy("initial_msg");
+  const greeter = await Greeter.deploy();
   //We use wait to recieve the transaction (deployment) receipt, which contrains contractAddress
   const contractAddress = (await greeter.deployTransaction.wait())
     .contractAddress;
 
-  console.log(`Greeter deployed to: ${contractAddress}`);
+  console.log(`A deployed to: ${contractAddress}`);
 
   return contractAddress;
 };
